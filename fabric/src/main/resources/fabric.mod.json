@@ -1,7 +1,7 @@
 {
     "schemaVersion": 1,
     "id": "${mod_id}",
-    "version": "${version}",
+    "version": "${version_fabric}",
     "name": "${mod_name}",
     "description": "${description}",
     "authors": [
@@ -17,6 +17,9 @@
     "entrypoints": {
         "main": [
             "com.cozary.creeper_diversity.CreeperDiversityFabric"
+        ],
+        "client": [
+            "com.cozary.creeper_diversity.client.CreeperDiversityFabricClient"
         ]
     },
     "mixins": [
@@ -31,6 +34,7 @@
     },
     "suggests": {
         "another-mod": "*"
-    }
+    },
+    "accessWidener": "creeper_diversity.accesswidener"
 }
   

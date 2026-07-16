@@ -1,6 +1,10 @@
 plugins {
     id 'multiloader-loader'
     id 'net.neoforged.moddev'
+    id "me.modmuss50.mod-publish-plugin" version "${mod_publish_version}"
+}
+base {
+    archivesName = "${mod_name}-neoforge-${minecraft_version}-${version_neoforge}"
 }
 
 neoForge {
@@ -59,3 +63,26 @@ sourceSets.configureEach {
         }
     }
 }
+
+publishMods {
+    file = jar.archiveFile
+    changelog = getLatestChangelog()
+    type = ALPHA
+    modLoaders.add("neoforge")
+    displayName = "${mod_name}-neoforge-${minecraft_version}-${version_neoforge}"
+    dryRun = dry_run.toBoolean()
+    version = version_neoforge
+
+    curseforge {
+        accessToken = providers.environmentVariable("CURSEFORGE_API_KEY")
+        projectId = curseforge_project_id
+        minecraftVersions.add(minecraft_version)
+    }
+
+    modrinth {
+        accessToken = providers.environmentVariable("MODRINTH_API_KEY")
+        projectId = modrinth_project_id
+        minecraftVersions.add(minecraft_version)
+    }
+}
+
