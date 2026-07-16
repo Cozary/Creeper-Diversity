@@ -1,18 +1,43 @@
 package com.cozary.creeper_diversity;
 
+import com.cozary.creeper_diversity.entity.MiniCreeperEntity;
+import com.cozary.creeper_diversity.init.ModEntityTypes;
+import com.cozary.creeper_diversity.init.ModItems;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.entity.SpawnPlacementTypes;
+import net.minecraft.world.entity.SpawnPlacements;
+import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.levelgen.Heightmap;
 
 public class CreeperDiversityFabric implements ModInitializer {
-    
+
+    private static final ResourceKey<CreativeModeTab> ITEM_GROUP = ResourceKey.create(Registries.CREATIVE_MODE_TAB, Identifier.fromNamespaceAndPath(CreeperDiversity.MOD_ID, "creeper_diversity"));
+
     @Override
     public void onInitialize() {
-        
-        // This method is invoked by the Fabric mod loader when it is ready
-        // to load your mod. You can access Fabric and Common code in this
-        // project.
+        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, ITEM_GROUP, FabricCreativeModeTab.builder()
+                .title(Component.translatable("itemGroup.creeper_diversity"))
+                .icon(() -> new ItemStack(ModItems.MINI_CREEPER_SPAWN_EGG.get()))
+                .displayItems((parameters, output) -> {
+                    output.accept(ModItems.MINI_CREEPER_SPAWN_EGG.get());
+                })
+                .build()
+        );
 
-        // Use Fabric to bootstrap the Common mod.
-        CreeperDiversity.LOG.info("Hello Fabric world!");
         CreeperDiversity.init();
+
+        FabricDefaultAttributeRegistry.register(ModEntityTypes.MINI_CREEPER.get(), MiniCreeperEntity.createAttributes());
+
+        SpawnPlacements.register(ModEntityTypes.MINI_CREEPER.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules);
     }
 }
