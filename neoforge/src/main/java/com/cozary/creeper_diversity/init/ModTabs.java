@@ -19,6 +19,7 @@ public class ModTabs {
             .icon(() -> new ItemStack(ModItems.MINI_CREEPER_SPAWN_EGG.get()))
             .displayItems((parameters, output) -> {
                 output.accept(ModItems.MINI_CREEPER_SPAWN_EGG.get());
+                output.accept(ModItems.CACTUS_CREEPER_SPAWN_EGG.get());
             })
             .build());
 

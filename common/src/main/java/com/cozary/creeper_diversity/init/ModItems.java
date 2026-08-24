@@ -20,6 +20,15 @@ public class ModItems {
             )
     );
 
+    public static final RegistryObject<Item> CACTUS_CREEPER_SPAWN_EGG = ITEMS.register("cactus_creeper_spawn_egg", () ->
+            new SpawnEggItem(
+                    new Item.Properties()
+                            .spawnEgg(ModEntityTypes.CACTUS_CREEPER.get())
+                            .setId(ResourceKey.create(Registries.ITEM,
+                                    Identifier.fromNamespaceAndPath(CreeperDiversity.MOD_ID, "cactus_creeper_spawn_egg")))
+            )
+    );
+
     public static void loadClass() {
     }
 }

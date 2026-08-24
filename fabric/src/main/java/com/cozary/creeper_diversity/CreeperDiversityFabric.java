@@ -1,5 +1,6 @@
 package com.cozary.creeper_diversity;
 
+import com.cozary.creeper_diversity.entity.CactusCreeperEntity;
 import com.cozary.creeper_diversity.entity.MiniCreeperEntity;
 import com.cozary.creeper_diversity.init.ModEntityTypes;
 import com.cozary.creeper_diversity.init.ModItems;
@@ -12,12 +13,8 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.entity.SpawnPlacementTypes;
-import net.minecraft.world.entity.SpawnPlacements;
-import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.levelgen.Heightmap;
 
 public class CreeperDiversityFabric implements ModInitializer {
 
@@ -30,6 +27,7 @@ public class CreeperDiversityFabric implements ModInitializer {
                 .icon(() -> new ItemStack(ModItems.MINI_CREEPER_SPAWN_EGG.get()))
                 .displayItems((parameters, output) -> {
                     output.accept(ModItems.MINI_CREEPER_SPAWN_EGG.get());
+                    output.accept(ModItems.CACTUS_CREEPER_SPAWN_EGG.get());
                 })
                 .build()
         );
@@ -37,7 +35,6 @@ public class CreeperDiversityFabric implements ModInitializer {
         CreeperDiversity.init();
 
         FabricDefaultAttributeRegistry.register(ModEntityTypes.MINI_CREEPER.get(), MiniCreeperEntity.createAttributes());
-
-        SpawnPlacements.register(ModEntityTypes.MINI_CREEPER.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules);
+        FabricDefaultAttributeRegistry.register(ModEntityTypes.CACTUS_CREEPER.get(), CactusCreeperEntity.createAttributes());
     }
 }

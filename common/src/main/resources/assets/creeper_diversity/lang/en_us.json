@@ -1,5 +1,8 @@
 {
   "entity.creeper_diversity.mini_creeper": "Mini Creeper",
+  "entity.creeper_diversity.cactus_creeper": "Cactus Creeper",
+  "entity.creeper_diversity.cactus_spine": "Cactus Spine",
   "item.creeper_diversity.mini_creeper_spawn_egg": "Mini Creeper Spawn Egg",
+  "item.creeper_diversity.cactus_creeper_spawn_egg": "Cactus Creeper Spawn Egg",
   "itemGroup.creeper_diversity": "Creeper Diversity"
 }

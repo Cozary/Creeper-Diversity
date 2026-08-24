@@ -19,6 +19,21 @@ public class ModEntityTypes {
                     .build(ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(CreeperDiversity.MOD_ID, "mini_creeper")))
     );
 
+    public static final RegistryObject<EntityType<com.cozary.creeper_diversity.entity.CactusCreeperEntity>> CACTUS_CREEPER = ENTITY_TYPES.register("cactus_creeper", () ->
+            EntityType.Builder.of(com.cozary.creeper_diversity.entity.CactusCreeperEntity::new, MobCategory.MONSTER)
+                    .sized(0.6F, 1.7F)
+                    .clientTrackingRange(8)
+                    .build(ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(CreeperDiversity.MOD_ID, "cactus_creeper")))
+    );
+
+    public static final RegistryObject<EntityType<com.cozary.creeper_diversity.entity.CactusSpineEntity>> CACTUS_SPINE = ENTITY_TYPES.register("cactus_spine", () ->
+            EntityType.Builder.<com.cozary.creeper_diversity.entity.CactusSpineEntity>of(com.cozary.creeper_diversity.entity.CactusSpineEntity::new, MobCategory.MISC)
+                    .sized(0.25F, 0.25F)
+                    .clientTrackingRange(4)
+                    .updateInterval(20)
+                    .build(ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(CreeperDiversity.MOD_ID, "cactus_spine")))
+    );
+
     public static void loadClass() {
     }
 }

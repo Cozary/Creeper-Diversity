@@ -1,6 +1,8 @@
 package com.cozary.creeper_diversity.register;
 
 import com.cozary.creeper_diversity.CreeperDiversity;
+import com.cozary.creeper_diversity.client.renderer.CactusCreeperRenderer;
+import com.cozary.creeper_diversity.client.renderer.CactusSpineRenderer;
 import com.cozary.creeper_diversity.client.renderer.MiniCreeperRenderer;
 import com.cozary.creeper_diversity.init.ModEntityTypes;
 import net.neoforged.api.distmarker.Dist;
@@ -14,5 +16,7 @@ public class RendererRegister {
     @SubscribeEvent
     public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerEntityRenderer(ModEntityTypes.MINI_CREEPER.get(), MiniCreeperRenderer::new);
+        event.registerEntityRenderer(ModEntityTypes.CACTUS_CREEPER.get(), CactusCreeperRenderer::new);
+        event.registerEntityRenderer(ModEntityTypes.CACTUS_SPINE.get(), CactusSpineRenderer::new);
     }
 }
