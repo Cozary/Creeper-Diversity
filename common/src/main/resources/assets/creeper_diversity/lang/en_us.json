@@ -3,8 +3,11 @@
   "entity.creeper_diversity.cactus_creeper": "Cactus Creeper",
   "entity.creeper_diversity.cactus_spine": "Cactus Spine",
   "entity.creeper_diversity.spore_creeper": "Spore Creeper",
+  "entity.creeper_diversity.mud_creeper": "Mud Creeper",
   "item.creeper_diversity.mini_creeper_spawn_egg": "Mini Creeper Spawn Egg",
   "item.creeper_diversity.cactus_creeper_spawn_egg": "Cactus Creeper Spawn Egg",
   "item.creeper_diversity.spore_creeper_spawn_egg": "Spore Creeper Spawn Egg",
+  "item.creeper_diversity.mud_creeper_spawn_egg": "Mud Creeper Spawn Egg",
+  "block.creeper_diversity.mud_layer": "Mud Layer",
   "itemGroup.creeper_diversity": "Creeper Diversity"
 }

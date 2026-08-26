@@ -34,7 +34,16 @@ public class ModItems {
                     new Item.Properties()
                             .spawnEgg(ModEntityTypes.SPORE_CREEPER.get())
                             .setId(ResourceKey.create(Registries.ITEM,
-                                    Identifier.fromNamespaceAndPath(CreeperDiversity.MOD_ID, "spore_creeper_spawn_egg")))
+                                     Identifier.fromNamespaceAndPath(CreeperDiversity.MOD_ID, "spore_creeper_spawn_egg")))
+            )
+    );
+
+    public static final RegistryObject<Item> MUD_CREEPER_SPAWN_EGG = ITEMS.register("mud_creeper_spawn_egg", () ->
+            new SpawnEggItem(
+                    new Item.Properties()
+                            .spawnEgg(ModEntityTypes.MUD_CREEPER.get())
+                            .setId(ResourceKey.create(Registries.ITEM,
+                                    Identifier.fromNamespaceAndPath(CreeperDiversity.MOD_ID, "mud_creeper_spawn_egg")))
             )
     );
 

@@ -1,5 +1,6 @@
 package com.cozary.creeper_diversity;
 
+import com.cozary.creeper_diversity.init.ModBlocks;
 import com.cozary.creeper_diversity.init.ModEntityTypes;
 import com.cozary.creeper_diversity.init.ModItems;
 import com.cozary.creeper_diversity.platform.Services;
@@ -18,6 +19,7 @@ public class CreeperDiversity {
         LOG.info("Hello from Common init on {}! we are currently in a {} environment!", Services.PLATFORM.getPlatformName(), Services.PLATFORM.getEnvironmentName());
         LOG.info("The ID for diamonds is {}", BuiltInRegistries.ITEM.getKey(Items.DIAMOND));
 
+        ModBlocks.loadClass();
         ModEntityTypes.loadClass();
         ModItems.loadClass();
 

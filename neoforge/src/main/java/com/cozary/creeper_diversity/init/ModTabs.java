@@ -21,6 +21,7 @@ public class ModTabs {
                 output.accept(ModItems.MINI_CREEPER_SPAWN_EGG.get());
                 output.accept(ModItems.CACTUS_CREEPER_SPAWN_EGG.get());
                 output.accept(ModItems.SPORE_CREEPER_SPAWN_EGG.get());
+                output.accept(ModItems.MUD_CREEPER_SPAWN_EGG.get());
             })
             .build());
 

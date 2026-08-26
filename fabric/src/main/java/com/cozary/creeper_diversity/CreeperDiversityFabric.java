@@ -2,6 +2,7 @@ package com.cozary.creeper_diversity;
 
 import com.cozary.creeper_diversity.entity.CactusCreeperEntity;
 import com.cozary.creeper_diversity.entity.MiniCreeperEntity;
+import com.cozary.creeper_diversity.entity.MudCreeperEntity;
 import com.cozary.creeper_diversity.entity.SporeCreeperEntity;
 import com.cozary.creeper_diversity.init.ModEntityTypes;
 import com.cozary.creeper_diversity.init.ModItems;
@@ -30,6 +31,7 @@ public class CreeperDiversityFabric implements ModInitializer {
                     output.accept(ModItems.MINI_CREEPER_SPAWN_EGG.get());
                     output.accept(ModItems.CACTUS_CREEPER_SPAWN_EGG.get());
                     output.accept(ModItems.SPORE_CREEPER_SPAWN_EGG.get());
+                    output.accept(ModItems.MUD_CREEPER_SPAWN_EGG.get());
                 })
                 .build()
         );
@@ -39,5 +41,6 @@ public class CreeperDiversityFabric implements ModInitializer {
         FabricDefaultAttributeRegistry.register(ModEntityTypes.MINI_CREEPER.get(), MiniCreeperEntity.createAttributes());
         FabricDefaultAttributeRegistry.register(ModEntityTypes.CACTUS_CREEPER.get(), CactusCreeperEntity.createAttributes());
         FabricDefaultAttributeRegistry.register(ModEntityTypes.SPORE_CREEPER.get(), SporeCreeperEntity.createAttributes());
+        FabricDefaultAttributeRegistry.register(ModEntityTypes.MUD_CREEPER.get(), MudCreeperEntity.createAttributes());
     }
 }
