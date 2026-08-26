@@ -20,6 +20,7 @@ public class ModTabs {
             .displayItems((parameters, output) -> {
                 output.accept(ModItems.MINI_CREEPER_SPAWN_EGG.get());
                 output.accept(ModItems.CACTUS_CREEPER_SPAWN_EGG.get());
+                output.accept(ModItems.SPORE_CREEPER_SPAWN_EGG.get());
             })
             .build());
 

@@ -2,7 +2,9 @@
   "entity.creeper_diversity.mini_creeper": "Mini Creeper",
   "entity.creeper_diversity.cactus_creeper": "Cactus Creeper",
   "entity.creeper_diversity.cactus_spine": "Espina de Cactus",
+  "entity.creeper_diversity.spore_creeper": "Spore Creeper",
   "item.creeper_diversity.mini_creeper_spawn_egg": "Huevo generador de Mini Creeper",
   "item.creeper_diversity.cactus_creeper_spawn_egg": "Huevo generador de Cactus Creeper",
+  "item.creeper_diversity.spore_creeper_spawn_egg": "Huevo generador de Spore Creeper",
   "itemGroup.creeper_diversity": "Creeper Diversity"
 }
