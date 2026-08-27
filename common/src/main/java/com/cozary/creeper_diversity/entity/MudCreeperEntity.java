@@ -33,17 +33,17 @@ public class MudCreeperEntity extends Creeper {
     public void aiStep() {
         super.aiStep();
 
-        if (this.level().isClientSide()) {
+        if (!this.level().isClientSide()) {
+            if (this.getDeltaMovement().horizontalDistanceSqr() > 0.0001D || this.tickCount % 10 == 0) {
+                placeMudTrail();
+            }
+        } else {
             if (this.getDeltaMovement().horizontalDistanceSqr() > 0.0001D && this.random.nextFloat() < 0.4F) {
                 double px = this.getX() + (this.random.nextDouble() - 0.5D) * 0.6D;
                 double py = this.getY() + 0.1D;
                 double pz = this.getZ() + (this.random.nextDouble() - 0.5D) * 0.6D;
                 this.level().addParticle(new BlockParticleOption(ParticleTypes.BLOCK, Blocks.MUD.defaultBlockState()),
                         px, py, pz, 0.0D, 0.05D, 0.0D);
-            }
-        } else {
-            if (this.getDeltaMovement().horizontalDistanceSqr() > 0.0001D || this.tickCount % 10 == 0) {
-                placeMudTrail();
             }
         }
     }

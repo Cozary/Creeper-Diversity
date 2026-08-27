@@ -3,6 +3,7 @@ package com.cozary.creeper_diversity.init;
 import com.cozary.creeper_diversity.CreeperDiversity;
 import com.cozary.creeper_diversity.entity.CactusCreeperEntity;
 import com.cozary.creeper_diversity.entity.CactusSpineEntity;
+import com.cozary.creeper_diversity.entity.IceCreeperEntity;
 import com.cozary.creeper_diversity.entity.MiniCreeperEntity;
 import com.cozary.creeper_diversity.entity.MudCreeperEntity;
 import com.cozary.creeper_diversity.entity.SporeCreeperEntity;
@@ -50,6 +51,13 @@ public class ModEntityTypes {
                     .sized(0.6F, 1.7F)
                     .clientTrackingRange(8)
                     .build(ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(CreeperDiversity.MOD_ID, "mud_creeper")))
+    );
+
+    public static final RegistryObject<EntityType<IceCreeperEntity>> ICE_CREEPER = ENTITY_TYPES.register("ice_creeper", () ->
+            EntityType.Builder.of(IceCreeperEntity::new, MobCategory.MONSTER)
+                    .sized(0.6F, 1.7F)
+                    .clientTrackingRange(8)
+                    .build(ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(CreeperDiversity.MOD_ID, "ice_creeper")))
     );
 
     public static void loadClass() {

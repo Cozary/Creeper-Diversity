@@ -33,9 +33,9 @@ public class CactusSpineEntity extends AbstractArrow {
     @Override
     protected void onHitEntity(EntityHitResult hitResult) {
         super.onHitEntity(hitResult);
-        if (hitResult.getEntity() instanceof LivingEntity living) {
-            living.setStingerCount(living.getStingerCount() + 1);
-            if (!this.level().isClientSide()) {
+        if (!this.level().isClientSide()) {
+            if (hitResult.getEntity() instanceof LivingEntity living) {
+                living.setStingerCount(living.getStingerCount() + 1);
                 living.hurt(this.damageSources().cactus(), 2.0F);
             }
         }

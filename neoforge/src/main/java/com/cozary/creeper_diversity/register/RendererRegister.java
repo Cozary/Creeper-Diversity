@@ -3,6 +3,7 @@ package com.cozary.creeper_diversity.register;
 import com.cozary.creeper_diversity.CreeperDiversity;
 import com.cozary.creeper_diversity.client.renderer.CactusCreeperRenderer;
 import com.cozary.creeper_diversity.client.renderer.CactusSpineRenderer;
+import com.cozary.creeper_diversity.client.renderer.IceCreeperRenderer;
 import com.cozary.creeper_diversity.client.renderer.MiniCreeperRenderer;
 import com.cozary.creeper_diversity.client.renderer.MudCreeperRenderer;
 import com.cozary.creeper_diversity.client.renderer.SporeCreeperRenderer;
@@ -22,5 +23,6 @@ public class RendererRegister {
         event.registerEntityRenderer(ModEntityTypes.CACTUS_SPINE.get(), CactusSpineRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.SPORE_CREEPER.get(), SporeCreeperRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.MUD_CREEPER.get(), MudCreeperRenderer::new);
+        event.registerEntityRenderer(ModEntityTypes.ICE_CREEPER.get(), IceCreeperRenderer::new);
     }
 }

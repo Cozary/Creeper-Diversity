@@ -3,6 +3,7 @@ package com.cozary.creeper_diversity;
 import com.cozary.creeper_diversity.init.ModBlocks;
 import com.cozary.creeper_diversity.init.ModEntityTypes;
 import com.cozary.creeper_diversity.init.ModItems;
+import com.cozary.creeper_diversity.init.ModMobEffects;
 import com.cozary.creeper_diversity.platform.Services;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.Items;
@@ -22,6 +23,7 @@ public class CreeperDiversity {
         ModBlocks.loadClass();
         ModEntityTypes.loadClass();
         ModItems.loadClass();
+        ModMobEffects.loadClass();
 
         if (Services.PLATFORM.isModLoaded("creeper_diversity")) {
             LOG.info("Hello to creeper_diversity");

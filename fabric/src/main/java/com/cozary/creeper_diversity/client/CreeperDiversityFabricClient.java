@@ -2,6 +2,7 @@ package com.cozary.creeper_diversity.client;
 
 import com.cozary.creeper_diversity.client.renderer.CactusCreeperRenderer;
 import com.cozary.creeper_diversity.client.renderer.CactusSpineRenderer;
+import com.cozary.creeper_diversity.client.renderer.IceCreeperRenderer;
 import com.cozary.creeper_diversity.client.renderer.MiniCreeperRenderer;
 import com.cozary.creeper_diversity.client.renderer.MudCreeperRenderer;
 import com.cozary.creeper_diversity.client.renderer.SporeCreeperRenderer;
@@ -21,5 +22,6 @@ public class CreeperDiversityFabricClient implements ClientModInitializer {
         EntityRenderers.register(ModEntityTypes.CACTUS_SPINE.get(), CactusSpineRenderer::new);
         EntityRenderers.register(ModEntityTypes.SPORE_CREEPER.get(), SporeCreeperRenderer::new);
         EntityRenderers.register(ModEntityTypes.MUD_CREEPER.get(), MudCreeperRenderer::new);
+        EntityRenderers.register(ModEntityTypes.ICE_CREEPER.get(), IceCreeperRenderer::new);
     }
 }

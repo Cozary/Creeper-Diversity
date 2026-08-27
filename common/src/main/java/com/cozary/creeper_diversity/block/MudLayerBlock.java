@@ -68,9 +68,11 @@ public class MudLayerBlock extends Block {
 
     @Override
     protected void entityInside(BlockState state, Level level, BlockPos pos, Entity entity, InsideBlockEffectApplier effectApplier, boolean isFullyInside) {
-        if (entity instanceof LivingEntity living && !(living instanceof MudCreeperEntity)) {
-            living.makeStuckInBlock(state, new Vec3(0.7D, 1.0D, 0.7D));
-            living.addEffect(new MobEffectInstance(MobEffects.SLOWNESS, 40, 1, false, true, true));
+        if (!level.isClientSide()) {
+            if (entity instanceof LivingEntity living && !(living instanceof MudCreeperEntity)) {
+                living.makeStuckInBlock(state, new Vec3(0.7D, 1.0D, 0.7D));
+                living.addEffect(new MobEffectInstance(MobEffects.SLOWNESS, 40, 1, false, true, true));
+            }
         }
     }
 
