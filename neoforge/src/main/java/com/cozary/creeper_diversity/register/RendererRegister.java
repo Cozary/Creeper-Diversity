@@ -6,6 +6,7 @@ import com.cozary.creeper_diversity.client.renderer.CactusSpineRenderer;
 import com.cozary.creeper_diversity.client.renderer.IceCreeperRenderer;
 import com.cozary.creeper_diversity.client.renderer.MiniCreeperRenderer;
 import com.cozary.creeper_diversity.client.renderer.MudCreeperRenderer;
+import com.cozary.creeper_diversity.client.renderer.PinkCreeperRenderer;
 import com.cozary.creeper_diversity.client.renderer.SporeCreeperRenderer;
 import com.cozary.creeper_diversity.init.ModEntityTypes;
 import net.neoforged.api.distmarker.Dist;
@@ -24,5 +25,6 @@ public class RendererRegister {
         event.registerEntityRenderer(ModEntityTypes.SPORE_CREEPER.get(), SporeCreeperRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.MUD_CREEPER.get(), MudCreeperRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.ICE_CREEPER.get(), IceCreeperRenderer::new);
+        event.registerEntityRenderer(ModEntityTypes.PINK_CREEPER.get(), PinkCreeperRenderer::new);
     }
 }

@@ -5,6 +5,7 @@ import com.cozary.creeper_diversity.entity.CactusCreeperEntity;
 import com.cozary.creeper_diversity.entity.IceCreeperEntity;
 import com.cozary.creeper_diversity.entity.MiniCreeperEntity;
 import com.cozary.creeper_diversity.entity.MudCreeperEntity;
+import com.cozary.creeper_diversity.entity.PinkCreeperEntity;
 import com.cozary.creeper_diversity.entity.SporeCreeperEntity;
 import com.cozary.creeper_diversity.init.ModEntityTypes;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -21,5 +22,6 @@ public class EntityRegister {
         event.put(ModEntityTypes.SPORE_CREEPER.get(), SporeCreeperEntity.createAttributes().build());
         event.put(ModEntityTypes.MUD_CREEPER.get(), MudCreeperEntity.createAttributes().build());
         event.put(ModEntityTypes.ICE_CREEPER.get(), IceCreeperEntity.createAttributes().build());
+        event.put(ModEntityTypes.PINK_CREEPER.get(), PinkCreeperEntity.createAttributes().build());
     }
 }

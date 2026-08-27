@@ -56,6 +56,15 @@ public class ModItems {
             )
     );
 
+    public static final RegistryObject<Item> PINK_CREEPER_SPAWN_EGG = ITEMS.register("pink_creeper_spawn_egg", () ->
+            new SpawnEggItem(
+                    new Item.Properties()
+                            .spawnEgg(ModEntityTypes.PINK_CREEPER.get())
+                            .setId(ResourceKey.create(Registries.ITEM,
+                                    Identifier.fromNamespaceAndPath(CreeperDiversity.MOD_ID, "pink_creeper_spawn_egg")))
+            )
+    );
+
     public static void loadClass() {
     }
 }
