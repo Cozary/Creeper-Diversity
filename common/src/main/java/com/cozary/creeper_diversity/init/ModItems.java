@@ -65,6 +65,15 @@ public class ModItems {
             )
     );
 
+    public static final RegistryObject<Item> GHOST_CREEPER_SPAWN_EGG = ITEMS.register("ghost_creeper_spawn_egg", () ->
+            new SpawnEggItem(
+                    new Item.Properties()
+                            .spawnEgg(ModEntityTypes.GHOST_CREEPER.get())
+                            .setId(ResourceKey.create(Registries.ITEM,
+                                    Identifier.fromNamespaceAndPath(CreeperDiversity.MOD_ID, "ghost_creeper_spawn_egg")))
+            )
+    );
+
     public static void loadClass() {
     }
 }

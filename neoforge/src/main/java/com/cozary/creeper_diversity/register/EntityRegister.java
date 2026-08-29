@@ -2,6 +2,7 @@ package com.cozary.creeper_diversity.register;
 
 import com.cozary.creeper_diversity.CreeperDiversity;
 import com.cozary.creeper_diversity.entity.CactusCreeperEntity;
+import com.cozary.creeper_diversity.entity.GhostCreeperEntity;
 import com.cozary.creeper_diversity.entity.IceCreeperEntity;
 import com.cozary.creeper_diversity.entity.MiniCreeperEntity;
 import com.cozary.creeper_diversity.entity.MudCreeperEntity;
@@ -23,5 +24,6 @@ public class EntityRegister {
         event.put(ModEntityTypes.MUD_CREEPER.get(), MudCreeperEntity.createAttributes().build());
         event.put(ModEntityTypes.ICE_CREEPER.get(), IceCreeperEntity.createAttributes().build());
         event.put(ModEntityTypes.PINK_CREEPER.get(), PinkCreeperEntity.createAttributes().build());
+        event.put(ModEntityTypes.GHOST_CREEPER.get(), GhostCreeperEntity.createAttributes().build());
     }
 }

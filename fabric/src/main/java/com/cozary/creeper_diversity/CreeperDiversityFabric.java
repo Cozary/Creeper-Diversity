@@ -1,6 +1,7 @@
 package com.cozary.creeper_diversity;
 
 import com.cozary.creeper_diversity.entity.CactusCreeperEntity;
+import com.cozary.creeper_diversity.entity.GhostCreeperEntity;
 import com.cozary.creeper_diversity.entity.IceCreeperEntity;
 import com.cozary.creeper_diversity.entity.MiniCreeperEntity;
 import com.cozary.creeper_diversity.entity.MudCreeperEntity;
@@ -36,6 +37,7 @@ public class CreeperDiversityFabric implements ModInitializer {
                     output.accept(ModItems.MUD_CREEPER_SPAWN_EGG.get());
                     output.accept(ModItems.ICE_CREEPER_SPAWN_EGG.get());
                     output.accept(ModItems.PINK_CREEPER_SPAWN_EGG.get());
+                    output.accept(ModItems.GHOST_CREEPER_SPAWN_EGG.get());
                 })
                 .build()
         );
@@ -48,5 +50,6 @@ public class CreeperDiversityFabric implements ModInitializer {
         FabricDefaultAttributeRegistry.register(ModEntityTypes.MUD_CREEPER.get(), MudCreeperEntity.createAttributes());
         FabricDefaultAttributeRegistry.register(ModEntityTypes.ICE_CREEPER.get(), IceCreeperEntity.createAttributes());
         FabricDefaultAttributeRegistry.register(ModEntityTypes.PINK_CREEPER.get(), PinkCreeperEntity.createAttributes());
+        FabricDefaultAttributeRegistry.register(ModEntityTypes.GHOST_CREEPER.get(), GhostCreeperEntity.createAttributes());
     }
 }

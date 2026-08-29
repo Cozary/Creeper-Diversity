@@ -1,5 +1,6 @@
-package com.cozary.creeper_diversity.client.renderer;
+package com.cozary.creeper_diversity.client.renderer.layer;
 
+import com.cozary.creeper_diversity.client.renderer.state.ModLivingEntityRenderStateAccessor;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.renderer.SubmitNodeCollector;
@@ -19,7 +20,7 @@ public class FrozenLayer<S extends LivingEntityRenderState, M extends EntityMode
 
     @Override
     public void submit(PoseStack poseStack, SubmitNodeCollector nodeCollector, int packedLight, S state, float yRot, float xRot) {
-        if (state instanceof FrozenRenderStateAccessor accessor && accessor.creeperDiversity$isEffectFrozen()) {
+        if (state instanceof ModLivingEntityRenderStateAccessor accessor && accessor.creeperDiversity$isEffectFrozen()) {
             if (!state.isInvisible) {
                 int overlay = LivingEntityRenderer.getOverlayCoords(state, 0.0F);
                 nodeCollector.order(1).submitModel(

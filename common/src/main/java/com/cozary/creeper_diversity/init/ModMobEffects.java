@@ -2,6 +2,7 @@ package com.cozary.creeper_diversity.init;
 
 import com.cozary.creeper_diversity.CreeperDiversity;
 import com.cozary.creeper_diversity.effect.FrozenMobEffect;
+import com.cozary.creeper_diversity.effect.SoulDetachedMobEffect;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
@@ -12,6 +13,10 @@ public class ModMobEffects {
 
     public static final RegistryObject<MobEffect> FROZEN = MOB_EFFECTS.register("frozen", () ->
             new FrozenMobEffect(MobEffectCategory.HARMFUL, 0x89CFF0)
+    );
+
+    public static final RegistryObject<MobEffect> SOUL_DETACHED = MOB_EFFECTS.register("soul_detached", () ->
+            new SoulDetachedMobEffect(MobEffectCategory.HARMFUL, 0x7FFFD4)
     );
 
     public static void loadClass() {

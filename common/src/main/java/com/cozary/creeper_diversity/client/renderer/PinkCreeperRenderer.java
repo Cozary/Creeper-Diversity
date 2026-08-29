@@ -1,6 +1,7 @@
 package com.cozary.creeper_diversity.client.renderer;
 
 import com.cozary.creeper_diversity.CreeperDiversity;
+import com.cozary.creeper_diversity.client.renderer.state.PinkCreeperRenderState;
 import com.cozary.creeper_diversity.entity.PinkCreeperEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;

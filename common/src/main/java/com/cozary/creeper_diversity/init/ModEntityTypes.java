@@ -3,10 +3,12 @@ package com.cozary.creeper_diversity.init;
 import com.cozary.creeper_diversity.CreeperDiversity;
 import com.cozary.creeper_diversity.entity.CactusCreeperEntity;
 import com.cozary.creeper_diversity.entity.CactusSpineEntity;
+import com.cozary.creeper_diversity.entity.GhostCreeperEntity;
 import com.cozary.creeper_diversity.entity.IceCreeperEntity;
 import com.cozary.creeper_diversity.entity.MiniCreeperEntity;
 import com.cozary.creeper_diversity.entity.MudCreeperEntity;
 import com.cozary.creeper_diversity.entity.PinkCreeperEntity;
+import com.cozary.creeper_diversity.entity.SoulVesselEntity;
 import com.cozary.creeper_diversity.entity.SporeCreeperEntity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
@@ -61,11 +63,26 @@ public class ModEntityTypes {
                     .build(ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(CreeperDiversity.MOD_ID, "ice_creeper")))
     );
 
-    public static final RegistryObject<EntityType<com.cozary.creeper_diversity.entity.PinkCreeperEntity>> PINK_CREEPER = ENTITY_TYPES.register("pink_creeper", () ->
-            EntityType.Builder.of(com.cozary.creeper_diversity.entity.PinkCreeperEntity::new, MobCategory.MONSTER)
+    public static final RegistryObject<EntityType<PinkCreeperEntity>> PINK_CREEPER = ENTITY_TYPES.register("pink_creeper", () ->
+            EntityType.Builder.of(PinkCreeperEntity::new, MobCategory.MONSTER)
                     .sized(0.6F, 1.7F)
                     .clientTrackingRange(8)
                     .build(ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(CreeperDiversity.MOD_ID, "pink_creeper")))
+    );
+
+    public static final RegistryObject<EntityType<GhostCreeperEntity>> GHOST_CREEPER = ENTITY_TYPES.register("ghost_creeper", () ->
+            EntityType.Builder.of(GhostCreeperEntity::new, MobCategory.MONSTER)
+                    .sized(0.6F, 1.7F)
+                    .clientTrackingRange(8)
+                    .build(ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(CreeperDiversity.MOD_ID, "ghost_creeper")))
+    );
+
+    public static final RegistryObject<EntityType<SoulVesselEntity>> SOUL_VESSEL = ENTITY_TYPES.register("soul_vessel", () ->
+            EntityType.Builder.<SoulVesselEntity>of(SoulVesselEntity::new, MobCategory.MISC)
+                    .sized(0.6F, 1.8F)
+                    .clientTrackingRange(8)
+                    .updateInterval(1)
+                    .build(ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(CreeperDiversity.MOD_ID, "soul_vessel")))
     );
 
     public static void loadClass() {

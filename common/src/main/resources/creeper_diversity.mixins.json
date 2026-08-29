@@ -5,7 +5,9 @@
   "compatibilityLevel": "JAVA_25",
   "mixins": [
     "CreeperAccessor",
-    "MixinLivingEntity"
+    "MixinLivingEntity",
+    "MixinMob",
+    "MixinPlayerList"
   ],
   "client": [
     "MixinMinecraft",
@@ -20,4 +22,3 @@
     "requireAnnotations": true
   }
 }
-

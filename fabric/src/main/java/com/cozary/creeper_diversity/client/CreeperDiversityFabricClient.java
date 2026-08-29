@@ -2,10 +2,12 @@ package com.cozary.creeper_diversity.client;
 
 import com.cozary.creeper_diversity.client.renderer.CactusCreeperRenderer;
 import com.cozary.creeper_diversity.client.renderer.CactusSpineRenderer;
+import com.cozary.creeper_diversity.client.renderer.GhostCreeperRenderer;
 import com.cozary.creeper_diversity.client.renderer.IceCreeperRenderer;
 import com.cozary.creeper_diversity.client.renderer.MiniCreeperRenderer;
 import com.cozary.creeper_diversity.client.renderer.MudCreeperRenderer;
 import com.cozary.creeper_diversity.client.renderer.PinkCreeperRenderer;
+import com.cozary.creeper_diversity.client.renderer.SoulVesselRenderer;
 import com.cozary.creeper_diversity.client.renderer.SporeCreeperRenderer;
 import com.cozary.creeper_diversity.init.ModEntityTypes;
 import net.fabricmc.api.ClientModInitializer;
@@ -25,5 +27,7 @@ public class CreeperDiversityFabricClient implements ClientModInitializer {
         EntityRenderers.register(ModEntityTypes.MUD_CREEPER.get(), MudCreeperRenderer::new);
         EntityRenderers.register(ModEntityTypes.ICE_CREEPER.get(), IceCreeperRenderer::new);
         EntityRenderers.register(ModEntityTypes.PINK_CREEPER.get(), PinkCreeperRenderer::new);
+        EntityRenderers.register(ModEntityTypes.GHOST_CREEPER.get(), GhostCreeperRenderer::new);
+        EntityRenderers.register(ModEntityTypes.SOUL_VESSEL.get(), SoulVesselRenderer::new);
     }
 }

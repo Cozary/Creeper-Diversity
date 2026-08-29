@@ -9,6 +9,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -132,7 +133,7 @@ public class PinkCreeperEntity extends Creeper {
     }
 
     @Override
-    public boolean isInvulnerableTo(ServerLevel serverLevel, net.minecraft.world.damagesource.DamageSource source) {
+    public boolean isInvulnerableTo(ServerLevel serverLevel, DamageSource source) {
         if (this.isPranking()) {
             return true;
         }
@@ -140,7 +141,7 @@ public class PinkCreeperEntity extends Creeper {
     }
 
     @Override
-    public boolean hurtServer(ServerLevel level, net.minecraft.world.damagesource.DamageSource source, float amount) {
+    public boolean hurtServer(ServerLevel level, DamageSource source, float amount) {
         if (this.isPranking()) {
             return false;
         }
@@ -148,7 +149,7 @@ public class PinkCreeperEntity extends Creeper {
     }
 
     @Override
-    public void die(net.minecraft.world.damagesource.DamageSource damageSource) {
+    public void die(DamageSource damageSource) {
         if (this.isPranking()) {
             if (!this.level().isClientSide()) {
                 float explosionPower = this.isPowered() ? 16.0F : 8.0F;
