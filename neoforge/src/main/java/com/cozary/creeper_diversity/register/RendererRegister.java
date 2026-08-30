@@ -1,6 +1,8 @@
 package com.cozary.creeper_diversity.register;
 
 import com.cozary.creeper_diversity.CreeperDiversity;
+import com.cozary.creeper_diversity.client.renderer.BoneCreeperRenderer;
+import com.cozary.creeper_diversity.client.renderer.BonePileRenderer;
 import com.cozary.creeper_diversity.client.renderer.CactusCreeperRenderer;
 import com.cozary.creeper_diversity.client.renderer.CactusSpineRenderer;
 import com.cozary.creeper_diversity.client.renderer.GhostCreeperRenderer;
@@ -30,5 +32,7 @@ public class RendererRegister {
         event.registerEntityRenderer(ModEntityTypes.PINK_CREEPER.get(), PinkCreeperRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.GHOST_CREEPER.get(), GhostCreeperRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.SOUL_VESSEL.get(), SoulVesselRenderer::new);
+        event.registerEntityRenderer(ModEntityTypes.BONE_CREEPER.get(), BoneCreeperRenderer::new);
+        event.registerEntityRenderer(ModEntityTypes.BONE_PILE.get(), BonePileRenderer::new);
     }
 }

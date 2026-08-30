@@ -74,6 +74,15 @@ public class ModItems {
             )
     );
 
+    public static final RegistryObject<Item> BONE_CREEPER_SPAWN_EGG = ITEMS.register("bone_creeper_spawn_egg", () ->
+            new SpawnEggItem(
+                    new Item.Properties()
+                            .spawnEgg(ModEntityTypes.BONE_CREEPER.get())
+                            .setId(ResourceKey.create(Registries.ITEM,
+                                    Identifier.fromNamespaceAndPath(CreeperDiversity.MOD_ID, "bone_creeper_spawn_egg")))
+            )
+    );
+
     public static void loadClass() {
     }
 }

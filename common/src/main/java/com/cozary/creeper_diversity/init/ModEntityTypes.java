@@ -1,6 +1,8 @@
 package com.cozary.creeper_diversity.init;
 
 import com.cozary.creeper_diversity.CreeperDiversity;
+import com.cozary.creeper_diversity.entity.BoneCreeperEntity;
+import com.cozary.creeper_diversity.entity.BonePileEntity;
 import com.cozary.creeper_diversity.entity.CactusCreeperEntity;
 import com.cozary.creeper_diversity.entity.CactusSpineEntity;
 import com.cozary.creeper_diversity.entity.GhostCreeperEntity;
@@ -83,6 +85,20 @@ public class ModEntityTypes {
                     .clientTrackingRange(8)
                     .updateInterval(1)
                     .build(ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(CreeperDiversity.MOD_ID, "soul_vessel")))
+    );
+
+    public static final RegistryObject<EntityType<BoneCreeperEntity>> BONE_CREEPER = ENTITY_TYPES.register("bone_creeper", () ->
+            EntityType.Builder.of(BoneCreeperEntity::new, MobCategory.MONSTER)
+                    .sized(0.6F, 1.7F)
+                    .clientTrackingRange(8)
+                    .build(ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(CreeperDiversity.MOD_ID, "bone_creeper")))
+    );
+
+    public static final RegistryObject<EntityType<BonePileEntity>> BONE_PILE = ENTITY_TYPES.register("bone_pile", () ->
+            EntityType.Builder.of(BonePileEntity::new, MobCategory.MISC)
+                    .sized(0.7F, 0.5F)
+                    .clientTrackingRange(8)
+                    .build(ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(CreeperDiversity.MOD_ID, "bone_pile")))
     );
 
     public static void loadClass() {

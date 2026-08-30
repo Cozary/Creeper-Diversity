@@ -1,5 +1,7 @@
 package com.cozary.creeper_diversity.client;
 
+import com.cozary.creeper_diversity.client.renderer.BoneCreeperRenderer;
+import com.cozary.creeper_diversity.client.renderer.BonePileRenderer;
 import com.cozary.creeper_diversity.client.renderer.CactusCreeperRenderer;
 import com.cozary.creeper_diversity.client.renderer.CactusSpineRenderer;
 import com.cozary.creeper_diversity.client.renderer.GhostCreeperRenderer;
@@ -29,5 +31,7 @@ public class CreeperDiversityFabricClient implements ClientModInitializer {
         EntityRenderers.register(ModEntityTypes.PINK_CREEPER.get(), PinkCreeperRenderer::new);
         EntityRenderers.register(ModEntityTypes.GHOST_CREEPER.get(), GhostCreeperRenderer::new);
         EntityRenderers.register(ModEntityTypes.SOUL_VESSEL.get(), SoulVesselRenderer::new);
+        EntityRenderers.register(ModEntityTypes.BONE_CREEPER.get(), BoneCreeperRenderer::new);
+        EntityRenderers.register(ModEntityTypes.BONE_PILE.get(), BonePileRenderer::new);
     }
 }

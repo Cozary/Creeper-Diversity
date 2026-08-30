@@ -25,6 +25,7 @@ public class ModTabs {
                 output.accept(ModItems.ICE_CREEPER_SPAWN_EGG.get());
                 output.accept(ModItems.PINK_CREEPER_SPAWN_EGG.get());
                 output.accept(ModItems.GHOST_CREEPER_SPAWN_EGG.get());
+                output.accept(ModItems.BONE_CREEPER_SPAWN_EGG.get());
             })
             .build());
 
